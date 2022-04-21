@@ -1,2 +1,3 @@
 # hugo-include-issue
-Reporducer of issue 
+Reproducer of issue with including a MarkDown file using an include shortcode.
+
