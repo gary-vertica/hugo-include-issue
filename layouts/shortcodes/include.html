@@ -1,0 +1,12 @@
+{{/* From https://discourse.gohugo.io/t/include-file-shortcode-for-including-files-with-shortcode-calls/16699 */}}
+{{- $includes_dir := (.Get 1) | default .Site.Params.includes_dir -}}
+{{- $include_file := printf "%s/%s" $includes_dir (.Get 0 ) -}}
+
+<!-- Include of -->
+
+{{- with .Site.GetPage $include_file -}}
+{{/*  {{- .Content | markdownify -}}  */}}
+  {{- .Content | markdownify -}}
+{{- else -}}
+{{- (errorf `%s: include shortcode could not find page named "%s"` .Position $include_file) -}}
+{{- end -}}
