@@ -5,8 +5,10 @@ draft: false
 ---
 
 
-This is a test of including content. Here is a  [included file](/_includes/included)
+Here is a direct link to the   [`included.md`](/_includes/included) file. There are no issues with the code example in that page.
 
-Here is the file included:
+Here's the included content: 
 
 {{% include "included.md" %}}
+
+Note that the "result_table" in the code example becomes some sort of heading.
