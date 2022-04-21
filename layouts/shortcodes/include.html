@@ -5,7 +5,6 @@
 <!-- Include of -->
 
 {{- with .Site.GetPage $include_file -}}
-{{/*  {{- .Content | markdownify -}}  */}}
   {{- .Content | markdownify -}}
 {{- else -}}
 {{- (errorf `%s: include shortcode could not find page named "%s"` .Position $include_file) -}}
